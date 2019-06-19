@@ -21,7 +21,7 @@ func (rt *MediaRT) Fetch() error {
 		u, _ := s.Find("a").Attr("href")
 		a := &Article{
 			Title: s.Find("h1").Text(),
-			URL:   u,
+			URL:   "https://nba.rakuten.co.jp" + u,
 		}
 		rt.Articles = append(rt.Articles, a)
 	})
